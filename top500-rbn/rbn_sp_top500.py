@@ -24,10 +24,8 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 #
-#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 import os, sys, time, zipfile
-from datetime import datetime, timedelta
 from collections import Counter
 from urllib.request import urlopen, Request
 from urllib.error import URLError, HTTPError
