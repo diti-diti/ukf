@@ -25,14 +25,17 @@
 # SOFTWARE.
 #
 # -*- coding: utf-8 -*-
-import os, sys, time, zipfile
+# %%
+
+# %%
+import os, time, zipfile
 from collections import Counter
 from urllib.request import urlopen, Request
 from urllib.error import URLError, HTTPError
-
+import pandas as pd
 import pandas as pd
 import streamlit as st
-
+# %%
 BASE_URL = "https://data.reversebeacon.net/rbn_history/{YMD}.zip"
 DATA_DIR = "data"
 
@@ -47,7 +50,7 @@ COLS13 = [
     "wpm","mode"
 ]
 HDR_FIRST = "callsign,de_pfx,de_cont,freq"  # Header for telegraphy CSV format
-
+# %%
 def daterange(d1, d2):
     # Generate a range of dates between d1 and d2
     d = d1
@@ -191,3 +194,4 @@ if go:
         st.bar_chart(df.set_index("callsign"))
 else:
     st.info("Set the date range, TOP N, and click CALCULATE.")
+# %%
