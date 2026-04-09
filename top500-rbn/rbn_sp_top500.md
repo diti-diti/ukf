@@ -32,7 +32,7 @@ Albo pełną ścieżką:
 
 ### Jak to działa (skrót architektury)
 
-**Źródło danych**:  
+**Źródło danych1**:  
 - Pliki ZIP dzienne:  
     `https://data.reversebeacon.net/rbn_history/YYYYMMDD.zip`  
 - Wewnątrz ZIP-a – CSV bez nagłówka (13 lub 15 kolumn) albo CSV z nagłówkiem w formacie „telegraphy”.
