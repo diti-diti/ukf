@@ -7,6 +7,8 @@ from collections import Counter
 from urllib.request import urlopen, Request
 from urllib.error import URLError, HTTPError
 import pandas as pd
+from tqdm import tqdm
+
 
 # Base URL for the data source, formatted according to the specified pattern:
 BASE_URL = "https://data.reversebeacon.net/rbn_history/{YMD}.zip"
@@ -19,7 +21,7 @@ COLS = [
     "poster",                # 0
     "poster_country_prefix", # 1  <-- 'SP' = skimmer in Poland (heard in SP)
     "poster_continent",      # 2
-    "freq_khz",              # 3
+    "freq_khz",              # 3``
     "band",                  # 4
     "dx",                    # 5  <-- sender (ranked)
     "dx_country_prefix",     # 6
